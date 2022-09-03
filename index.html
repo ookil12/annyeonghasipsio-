@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <form onsubmit="doAction();">
+      <input type="text" name="msg" id="msg" />
+      <button>확인</button>
+    </form>
+    <div id = "showcode">
+    </div>
+        
+    </div>
+    <script>
+      async function doAction() {
+        event.preventDefault();
+        let msgEle = document.getElementById("msg");
+        const element = document.getElementById('showcode');
+        // msgEle.value의 입력값이 있을 경우에는 페이지를 이동
+        //                        없을 경우에는 submit 동작을 취소시킨다.
+        if(msgEle.value == "201839205"){
+            element.innerHTML 
+            = '5013-5650-3399-161227';
+        }
+        if (msgEle.value.length == 0) {
+          // 입력값 없는 경우
+          // 이동시키지 않는다.
+          alert("메세지를 입력하세요");
+          // 중단
+          return false;
+        }
+        // 페이지 이동 - 서브밋 진행...
+        return true;
+      }
+    </script>
+  </body>
+</html>
